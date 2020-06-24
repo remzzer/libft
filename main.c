@@ -6,7 +6,7 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 18:43:34 by rrolland          #+#    #+#             */
-/*   Updated: 2020/06/24 15:48:02 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/06/24 20:16:17 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int		main(void)
 	}
 	return (0);
 }
-*/
 
 int		main(void)
 {
@@ -64,5 +63,35 @@ int		main(void)
 	{
 		printf("%c\n", dest[i]);
 	}
+	return (0);
+}
+
+int		main(void)
+{
+	char	*yo = "Hello";
+	char	*yi = "Hello";
+	size_t	n = 3;
+
+	printf("%d", ft_strncmp(yo, yi, n));
+	return(0);
+}
+
+int		main(void)
+{
+	char	dest[5] = "";
+	const char	*src = "o";
+	size_t dst_size = ft_strlen(dest);
+	//size_t i = 0;
+	printf("%zu", ft_strlcpy(dest, src, dst_size));
+	return (0);
+}
+*/
+
+int		main(void)
+{
+	int		c;
+
+	c = 1;
+	printf("%d", ft_isalpha(c));
 	return (0);
 }
