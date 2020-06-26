@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/25 19:06:14 by rrolland          #+#    #+#             */
-/*   Updated: 2020/06/26 14:48:30 by rrolland         ###   ########.fr       */
+/*   Created: 2020/06/26 18:30:16 by rrolland          #+#    #+#             */
+/*   Updated: 2020/06/26 18:43:46 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	int		neg;
-	int		res;
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			i;
 
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
-	neg = 1;
-	res = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while (i < n)
 	{
-		if (str[i] == '-')
-			neg = -1;
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	while (ft_isdigit(str[i]))
-	{
-		res = res * 10 + str[i] - 48;
-		i++;
-	}
-	return (res * neg);
+	return (0);
 }

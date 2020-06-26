@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/25 19:06:14 by rrolland          #+#    #+#             */
-/*   Updated: 2020/06/26 14:48:30 by rrolland         ###   ########.fr       */
+/*   Created: 2020/06/26 18:48:04 by rrolland          #+#    #+#             */
+/*   Updated: 2020/06/26 18:50:27 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+void	ft_memmove(void *dest, const void *src, size_t n)
 {
-	int		i;
-	int		neg;
-	int		res;
-
-	i = 0;
-	neg = 1;
-	res = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			neg = -1;
-		i++;
-	}
-	while (ft_isdigit(str[i]))
-	{
-		res = res * 10 + str[i] - 48;
-		i++;
-	}
-	return (res * neg);
+	
 }

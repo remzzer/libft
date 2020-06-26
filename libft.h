@@ -6,7 +6,7 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 13:38:16 by rrolland          #+#    #+#             */
-/*   Updated: 2020/06/25 19:28:48 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/06/26 18:47:12 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,9 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_atoi(const char *str);
+void	*ft_calloc(size_t n_mem, size_t size_mem);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif

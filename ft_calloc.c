@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/25 19:06:14 by rrolland          #+#    #+#             */
-/*   Updated: 2020/06/26 14:48:30 by rrolland         ###   ########.fr       */
+/*   Created: 2020/06/26 15:11:13 by rrolland          #+#    #+#             */
+/*   Updated: 2020/06/26 16:15:43 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+void	*ft_calloc(size_t n_mem, size_t size_mem)
 {
-	int		i;
-	int		neg;
-	int		res;
+	void	*ptr;
 
-	i = 0;
-	neg = 1;
-	res = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			neg = -1;
-		i++;
-	}
-	while (ft_isdigit(str[i]))
-	{
-		res = res * 10 + str[i] - 48;
-		i++;
-	}
-	return (res * neg);
+	if (!(ptr = malloc(size_mem * n_mem)))
+		return (NULL);
+	ft_bzero(ptr, size_mem * n_mem);
+	return (ptr);
 }

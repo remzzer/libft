@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/25 19:06:14 by rrolland          #+#    #+#             */
-/*   Updated: 2020/06/26 14:48:30 by rrolland         ###   ########.fr       */
+/*   Created: 2020/06/26 16:37:08 by rrolland          #+#    #+#             */
+/*   Updated: 2020/06/26 17:00:22 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
-	int		neg;
-	int		res;
+	size_t			i;
+	unsigned char	*ptr;
 
 	i = 0;
-	neg = 1;
-	res = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	ptr = (unsigned char *)s;
+	while (i < n)
 	{
-		if (str[i] == '-')
-			neg = -1;
+		if (ptr[i] == (unsigned char)c)
+			return ((void *)ptr + i);
 		i++;
 	}
-	while (ft_isdigit(str[i]))
-	{
-		res = res * 10 + str[i] - 48;
-		i++;
-	}
-	return (res * neg);
+	return (NULL);
 }
