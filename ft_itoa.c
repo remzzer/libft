@@ -1,42 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/26 18:48:04 by rrolland          #+#    #+#             */
-/*   Updated: 2020/06/29 16:15:22 by rrolland         ###   ########.fr       */
+/*   Created: 2020/06/29 18:46:54 by rrolland          #+#    #+#             */
+/*   Updated: 2020/06/29 19:17:13 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_itoa(int value, char *str, int base)
 {
-	size_t			i;
-	char			*d;
-	char			*s;
-
-	i = 0;
-	d = (char *)dest;
-	s = (char *)src;
-	if (!dest && !src)
-		return (NULL);
-	if (s < d)
-	{
-		i++;
-		while (i <= n)
-		{
-			d[n - i] = s[n - i];
-			i++;
-		}
-	}
-	else
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	return (dest);
+	
 }

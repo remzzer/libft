@@ -1,42 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/26 18:48:04 by rrolland          #+#    #+#             */
-/*   Updated: 2020/06/29 16:15:22 by rrolland         ###   ########.fr       */
+/*   Created: 2020/06/29 18:41:18 by rrolland          #+#    #+#             */
+/*   Updated: 2020/06/29 18:44:54 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int		ft_toupper(int c)
 {
-	size_t			i;
-	char			*d;
-	char			*s;
-
-	i = 0;
-	d = (char *)dest;
-	s = (char *)src;
-	if (!dest && !src)
-		return (NULL);
-	if (s < d)
-	{
-		i++;
-		while (i <= n)
-		{
-			d[n - i] = s[n - i];
-			i++;
-		}
-	}
+	if (c > 96 && c < 123)
+		return (c - 32);
 	else
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	return (dest);
+		return (c);
 }
