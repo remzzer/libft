@@ -6,7 +6,7 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 13:26:29 by rrolland          #+#    #+#             */
-/*   Updated: 2020/07/02 20:11:27 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/07/02 20:14:59 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,4 @@ char			*ft_itoa(int n)
 		len--;
 	}
 	return (str);
-}
-
-int		main(void)
-{
-	printf("%zu\n", ft_n_len(1234));
-	printf("%s\n", ft_itoa(1234));
-	printf("%s\n", ft_itoa(0));
-	return (0);
 }
