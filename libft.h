@@ -6,7 +6,7 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 13:38:16 by rrolland          #+#    #+#             */
-/*   Updated: 2020/07/03 13:24:44 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/07/03 16:58:54 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned
 int, char));
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
@@ -47,7 +48,7 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_atoi(const char *str);
-int		ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_tolower(int c);
