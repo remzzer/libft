@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/25 17:13:28 by rrolland          #+#    #+#             */
-/*   Updated: 2020/07/03 14:58:01 by rrolland         ###   ########.fr       */
+/*   Created: 2020/07/03 15:00:39 by rrolland          #+#    #+#             */
+/*   Updated: 2020/07/03 15:01:28 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft"
 
-size_t		ft_strlcat(char *dest, const char *src, size_t size)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	size_t j;
-	size_t len_dest;
 
-	i = 0;
-	j = 0;
-	len_dest = ft_strlen(dest);
-	if (size == 0 || len_dest >= size)
-		return (ft_strlen(src) + size);
-	while (dest[i] && i < size)
-		i++;
-	while (src[j] && (i < size - 1))
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (ft_strlen(src) + len_dest);
+
 }
