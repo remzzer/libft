@@ -6,7 +6,7 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 13:38:16 by rrolland          #+#    #+#             */
-/*   Updated: 2020/07/03 16:58:54 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/07/13 18:08:57 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned
 int, char));
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
 
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
