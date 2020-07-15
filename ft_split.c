@@ -6,14 +6,14 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 10:08:04 by rrolland          #+#    #+#             */
-/*   Updated: 2020/07/14 13:02:12 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/07/15 10:22:05 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static int		w_count(const char *str, char c)
+static int	w_count(const char *str, char c)
 {
 	int		count;
 	int		i;
@@ -31,7 +31,7 @@ static int		w_count(const char *str, char c)
 	return (count);
 }
 
-static int		w_length(const char *str, char c,  int pos)
+static int	w_length(const char *str, char c, int pos)
 {
 	int		count;
 
@@ -41,7 +41,7 @@ static int		w_length(const char *str, char c,  int pos)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		i;
@@ -65,20 +65,3 @@ char	**ft_split(char const *s, char c)
 	tab[j] = NULL;
 	return (tab);
 }
-
-int		main(void)
-{
-	char	**tab = ft_split("bieeeeenlebonjour", 'e');
-	int		i;
-
-	i = 0;
-	//printf("compteur:%d\n", w_count("bienlebonjour", 'e'));
-	//printf("length:%d\n", w_length("bienlebonjour", 'e', 0));
-	while (tab[i])
-	{
-		//printf("Res: %s\n", tab[i]);
-		printf("Test: %s\n", tab[i++]);
-	}
-	return (0);
-}
-
