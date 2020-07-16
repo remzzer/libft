@@ -6,7 +6,7 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 13:38:16 by rrolland          #+#    #+#             */
-/*   Updated: 2020/07/15 12:32:59 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/07/16 11:05:24 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int, char));
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
-char **ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c);
 
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
