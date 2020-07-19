@@ -222,7 +222,7 @@ int		main(void)
 	print_list(test);
 	return (0);
 }
-
+*/
 int		main(int argc, char **argv)
 {
 	char	*tab;
