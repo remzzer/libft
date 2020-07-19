@@ -199,11 +199,9 @@ int		main(int argc, char **argv)
 	}
 	else
 		puts("non");
-	//printf("%s\n", (char*)ft_lstnew("y"));
 	return(0);
 }
 
-*/
 
 void	print_list(t_list *li)
 {
@@ -224,10 +222,20 @@ int		main(void)
 	print_list(test);
 	return (0);
 }
+*/
 
+int		main(int argc, char **argv)
+{
+	char	*tab;
 
-
-
-
-
-
+	if (argc == 2)
+	{
+		tab = ft_strtrim(argv[1], "b");
+		printf("Res:%s", tab);
+	}
+	else
+	{
+		puts("dafuk");
+	}
+		return (0);
+}
