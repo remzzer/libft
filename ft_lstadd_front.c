@@ -6,7 +6,7 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 11:54:08 by rrolland          #+#    #+#             */
-/*   Updated: 2020/07/17 14:35:09 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/07/20 10:00:45 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	if (!new || !alst)
-		return;
-	(*new).next = *alst;
+		return ;
+	new->next = *alst;
 	*alst = new;
 }

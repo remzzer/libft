@@ -6,7 +6,7 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 13:50:25 by rrolland          #+#    #+#             */
-/*   Updated: 2020/07/17 14:40:13 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/07/20 14:18:54 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -193,6 +193,28 @@ int		main(int argc, char **argv)
 
 int		main(int argc, char **argv)
 {
+	char	*tab;
+
+	if (argc == 2)
+	{
+		tab = ft_strtrim(argv[1], "b");
+		printf("Res:%s", tab);
+	}
+	else
+	{
+		puts("dafuk");
+	}
+		return (0);
+}
+
+int		main(void)
+{
+	printf("Res:%s\n", ft_strnstr("frailat", "lat", 7));
+	return (0);
+}
+
+int		main(int argc, char **argv)
+{
 	if (argc == 2)
 	{
 		printf("%s\n", (char *)ft_lstnew(argv[1])->content); 
@@ -201,7 +223,6 @@ int		main(int argc, char **argv)
 		puts("non");
 	return(0);
 }
-
 
 void	print_list(t_list *li)
 {
@@ -222,19 +243,82 @@ int		main(void)
 	print_list(test);
 	return (0);
 }
-*/
-int		main(int argc, char **argv)
-{
-	char	*tab;
 
-	if (argc == 2)
-	{
-		tab = ft_strtrim(argv[1], "b");
-		printf("Res:%s", tab);
-	}
-	else
-	{
-		puts("dafuk");
-	}
+//Afficher le dernier element de la liste
+int		main(void)
+{
+
+	char	*str = "test";
+	//char	str[] = "test";
+	
+	t_list		*element_1;
+	t_list		*element_2;
+	t_list		*element_3;
+	t_list		*element_4;
+	t_list		*element_5;
+	t_list		*element_6;
+	t_list		*res;
+
+	if (!(element_1 = malloc(sizeof(t_list))))
 		return (0);
+	if (!(element_2 = malloc(sizeof(t_list))))
+		return (0);
+	if (!(element_3 = malloc(sizeof(t_list))))
+		return (0);
+	if (!(element_4 = malloc(sizeof(t_list))))
+		return (0);
+	if (!(element_5 = malloc(sizeof(t_list))))
+		return (0);
+	if (!(element_6 = malloc(sizeof(t_list))))
+		return (0);
+
+	element_1->next = element_2;
+	element_2->next = element_3;
+	element_3->next = element_4;
+	element_4->next = element_5;
+	element_5->next = element_6;
+	element_6->next = NULL;
+
+	//(*element_6).content = (void *)str;
+	element_6->content = (void *)str;
+	res = ft_lstlast(element_1);
+	printf("Res:%s\n", (char *)res->content);
+	return (0);
 }
+
+void	print_list(t_list *li)
+{
+	while (li->next != NULL)
+	{
+		printf("%s\n", (char *)li->content);
+		li = li->next;
+	}
+	printf("%s\n", (char *)li->content);
+}
+
+int		main(void)
+{
+	t_list		*last_element;
+	last_element = NULL;
+
+	ft_lstadd_back(&last_element, ft_lstnew("yolo"));
+	ft_lstadd_front(&last_element, ft_lstnew("first"));
+	ft_lstadd_front(&last_element, ft_lstnew("Second"));
+	print_list(last_element);
+	return (0);
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
