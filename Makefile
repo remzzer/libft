@@ -6,7 +6,7 @@
 #    By: rrolland <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/25 15:14:50 by rrolland          #+#    #+#              #
-#    Updated: 2020/07/21 14:43:10 by rrolland         ###   ########.fr        #
+#    Updated: 2020/07/24 11:05:44 by rrolland         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memchr.c \
 	ft_substr.c ft_strtrim.c ft_split.c
 
 BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-		ft_lstadd_back.c \ ft_lstdelone.c \ ft_lstclear.c \ ft_lstiter.c \
+		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 		ft_lstmap.c
 
 OBJS	=	${SRCS:.c=.o}

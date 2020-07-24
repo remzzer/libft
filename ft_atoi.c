@@ -6,7 +6,7 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 19:06:14 by rrolland          #+#    #+#             */
-/*   Updated: 2020/06/26 14:48:30 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/07/24 11:43:03 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_atoi(const char *str)
 {
-	int		i;
-	int		neg;
+	int			i;
+	int			neg;
 	int		res;
 
 	i = 0;
