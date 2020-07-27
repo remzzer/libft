@@ -30,10 +30,11 @@ static size_t	ft_n_len(long n)
 	return (len);
 }
 
-char	*ft_new_str(size_t n)
+char			*ft_new_str(size_t n)
 {
-	size_t		i;
+	size_t	i;
 	char	*dest;
+
 	dest = (char *)malloc(sizeof(*dest) * n + 1);
 	if (!dest)
 		return (NULL);
