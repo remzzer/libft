@@ -6,12 +6,11 @@
 /*   By: rrolland <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 11:55:50 by rrolland          #+#    #+#             */
-/*   Updated: 2020/07/15 13:47:01 by rrolland         ###   ########.fr       */
+/*   Updated: 2020/07/28 09:27:55 by rrolland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned
 int, char))
