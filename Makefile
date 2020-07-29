@@ -6,13 +6,13 @@
 #    By: rrolland <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/25 15:14:50 by rrolland          #+#    #+#              #
-#    Updated: 2020/07/24 11:05:44 by rrolland         ###   ########.fr        #
+#    Updated: 2020/07/29 15:18:31 by rrolland         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libft.a
 CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-c -Wall -Wextra -Werror
 RM		=	rm -f
 
 SRCS	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
@@ -26,18 +26,26 @@ SRCS	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-OBJS	=	${SRCS:.c=.o}
+OBJS	=	${SRCS:%.c=%.o}
 
-OBJSBONUS	=	${BONUS:.c=.o}
+OBJSBONUS	=	${BONUS:%.c=%.o}
 
-.c.o:
-	${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
+OBJS            = $(SRCS:%.c=%.o)
+B_OBJS          = $(B_SRCS:%.c=%.o)
+CC              = gcc
+CFLAGS          = -c -Wall -Wextra -Werror
+RM              = rm -f
+
+%.o:		%.c
+	${CC} ${CFLAGS} $< -o $@
 
 $(NAME):	${OBJS}
 	ar rc ${NAME} ${OBJS}
+	ranlib $(NAME)
 
 bonus:	${OBJS} ${OBJSBONUS}
-	ar rcs ${NAME} ${OBJS} ${OBJSBONUS}
+	ar rc ${NAME} ${OBJS} ${OBJSBONUS}
+	ranlib ${NAME}
 
 all:	${NAME}
 
@@ -49,4 +57,4 @@ fclean:	clean
 
 re:		fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean
