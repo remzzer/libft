@@ -6,7 +6,7 @@
 #    By: rrolland <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/25 15:14:50 by rrolland          #+#    #+#              #
-#    Updated: 2020/07/29 15:18:31 by rrolland         ###   ########.fr        #
+#    Updated: 2020/07/29 16:46:15 by rrolland         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,12 +29,6 @@ BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 OBJS	=	${SRCS:%.c=%.o}
 
 OBJSBONUS	=	${BONUS:%.c=%.o}
-
-OBJS            = $(SRCS:%.c=%.o)
-B_OBJS          = $(B_SRCS:%.c=%.o)
-CC              = gcc
-CFLAGS          = -c -Wall -Wextra -Werror
-RM              = rm -f
 
 %.o:		%.c
 	${CC} ${CFLAGS} $< -o $@
